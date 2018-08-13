@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e7f7cacb-0aff-4be3-b0ed-0c28213a847b" name="ssh://sun@10.0.120.167:22/home/sun/.virtualenvs/python1808/bin/python">
+        <fileTransfer host="10.0.120.167" port="22" accessType="SFTP">
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
