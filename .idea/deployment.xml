@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="ssh://sun@10.0.120.167:22/home/sun/.virtualenvs/python1808/bin/python" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="ssh://sun@10.0.120.167:22/home/sun/.virtualenvs/python1808/bin/python" autoUploadExternalChanges="true" showNewOnTargetInSync="false">
     <serverData>
       <paths name="ssh://sun@10.0.120.167:22/home/sun/.virtualenvs/python1808/bin/python">
         <serverdata>

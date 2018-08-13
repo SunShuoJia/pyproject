@@ -8,7 +8,7 @@ def index(request):
     return HttpResponse("Django 呵呵哒！！")
 
 def my_html(request):
-    return render(request,'my_index.html')
+    return render(request,'myindex.html')
 
 def get_data(req):
     #获取数据

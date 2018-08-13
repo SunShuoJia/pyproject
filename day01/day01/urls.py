@@ -16,10 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from t01.views import index,my_html,get_data
-
+from t01_1.views import get_datas
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r"^hello$", index),
     url(r"^index/",my_html),
-    url(r"^get_data/",get_data)
+    url(r"^get_data/",get_data),
+    url(r"^homework/",get_datas)
 ]
