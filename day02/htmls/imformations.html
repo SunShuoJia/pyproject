@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+</head>
+<body>
+<table align="center">
+    {% for foo in data %}
+        <tr>
+            <td>{{ foo.id }}</td>
+            <td>&nbsp;&nbsp;{{ foo.name }}</td>
+            <td>&nbsp;&nbsp;{{ foo.age }}</td>
+            <td>&nbsp;&nbsp;{{ foo.sex }}</td>
+            <td>&nbsp;&nbsp;{{ foo.birthday }}</td>
+            <td>&nbsp;&nbsp;{{ foo.is_married }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
