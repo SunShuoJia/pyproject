@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        document.onkeydown = function (event) {
+            var eve = event ||window.event;
+            if (eve.keyCode == 13){
+                btn_onclick();
+            }
+        }
+        function btn_onclick() {
+            key = document.getElementById("key").value;
+            if (key!=""){
+                location.href = 'Serach?key='+key;
+            }
+        }
+    </script>
+    <style type="text/css" rel="stylesheet">
+        div{
+            text-align: center;
+        }
+        .desc{
+            text-align: left;
+        }
+        th{
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div style="padding-top: 30px">
+        <input id="key" type="text">
+        <input id="btn" type="button" onclick="btn_onclick()" value="搜索">
+    </div>
+    <div style="margin: 30px;">
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading" >搜索结果</div>
+
+          <!-- Table -->
+          <table class="table" >
+            <tr>
+                <th width="100px" >方言</th>
+                <th>简述</th>
+            </tr>
+            {% for foo in data %}
+                <tr>
+                    <td style="vertical-align: middle">
+                        {{ foo.name }}
+                    </td>
+                    <td class="desc">
+                        {{ foo.describe }}
+                    </td>
+                </tr>
+            {% endfor %}
+          </table>
+        </div>
+    </div>
+</body>
+</html>

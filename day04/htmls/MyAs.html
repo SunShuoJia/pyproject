@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for foo in ass %}
+    {% if foo.face_score > 100 %}
+        <li style="color: red;">{{ forloop.counter }}:{{ foo.name }}:{{ forloop.revcounter }}</li>
+    {% else %}
+        <li>{{ forloop.counter }}:{{ foo.name }}:{{ forloop.revcounter }}</li>
+    {% endif %}
+    {#当循环数据为空的时候使用empty提示#}
+    {#即循环为空时empty执行#}
+{% empty %}
+    <p>查询失败</p>
+{% endfor %}
+<p>{{ ass.0.face_score }}</p>
+<p>访问方法{{ ass.1.get_msg }}</p>
+<hr/>
+<h1>
+    变量计算
+</h1>
+原来是{{ ass.0.face_score }}乘2以后是{% widthratio ass.0.face_score 1 2  %}
+<hr>
+整除：{{ ass.0.face_score|divisibleby:2 }}
+<hr>
+不能整除:{{ ass.0.face_score|divisibleby:3 }}
+<h2>过滤器：var|过滤器</h2>
+<P>过滤器包含：add(加减)、upper(英文字符全大写)、lower(英文字符全小写)</P>
+原来是{{ ass.0.face_score}}加1：{{ ass.0.face_score|add:1 }}
+<br>
+join的使用:{{ ass|join:'-' }}
+<br>
+{{ hehe|default:2 }}
+<hr>
+{{ code|safe }}
+{% comment %}
+    注释
+    <p>lksjdf</p>
+{% endcomment %}
+</body>
+</html>

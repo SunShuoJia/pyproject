@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css" rel="stylesheet">
+        div {
+            text-align: center;
+        }
+        .desc {
+            vertical-align: middle;
+        }
+        th {
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<form action="{% url 'py1808:test' %}" style="margin: 30px">
+    <div class="input-group">
+    <input type="text" name="kw" class="form-control" placeholder="要搜索的内容">
+    <span class="input-group-btn">
+            <button class="btn btn-default" type="submit">搜索</button>
+          </span>
+</div><!-- /input-group -->
+</form>
+<hr>
+<div style="margin: 5% 20%">
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">搜索结果</div>
+
+        <!-- Table -->
+        <table class="table">
+            <tr>
+                <th width="100px">名字</th>
+                <th>颜值</th>
+            </tr>
+            {% for foo in ass %}
+                <tr>
+                    <td style="vertical-align: middle">
+                        {{ foo.name }}
+                    </td>
+                    <td class="desc">
+                        {{ foo.face_score }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+</body>
+</html>

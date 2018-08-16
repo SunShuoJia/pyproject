@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>队员列表</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <ul>
+        {% for foo in players %}
+            <li>{{ foo.name }}的年龄是{{ foo.age }}</li>
+        {% endfor %}
+        
+    </ul>
+    <div style="width:50%;margin-left: 25%;text-align: center" >
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading">Panel heading</div>
+
+          <!-- Table -->
+          <table class="table" >
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+            </tr>
+            {% for foo in players %}
+                <tr>
+                    <td>
+                        {{ foo.name }}
+                    </td>
+                    <td>
+                        {{ foo.age }}
+                    </td>
+                </tr>
+            {% endfor %}
+          </table>
+        </div>
+    </div>
+</body>
+</html>
