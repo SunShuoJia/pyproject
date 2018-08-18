@@ -4,4 +4,7 @@
     <option name="languageLevel" value="ES6" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Remote Python 3.5.2 (sftp://sun@10.0.120.167:22/home/sun/.virtualenvs/python1808/bin/python)" project-jdk-type="Python SDK" />
+  <component name="PythonCompatibilityInspectionAdvertiser">
+    <option name="version" value="3" />
+  </component>
 </project>

@@ -19,10 +19,24 @@ def my_as(req):
     print(test)
     return HttpResponse(test)
 
-def my_serach(req):
+def my_serach(req,hh1,hh2):
+    print(hh1,hh2)
     kw = req.GET.get('kw','')
     data = MyAs.objects.filter(Q(name__contains=kw)|Q(ac__name__contains=kw))
     return render(req,'Serach.html',{'ass':data})
 
 def index(req):
-    return HttpResponseRedirect(reverse("py1808:w1"))
+    # 有参数名的反向解析
+    # return HttpResponseRedirect(reverse("py1808:getas",kwargs={'hh1':12,'hh2':12}))
+    return HttpResponseRedirect(reverse("py1808:getas",args=(3,'lala')))
+
+def get_as_by_id(req,a_id,extra):
+    #获取id
+    a_id=int(a_id)
+    #根据id拿信息
+    my_as = MyAs.objects.get(id=a_id)
+    #返回给前端
+    return HttpResponse(my_as.name+extra)
+
+def home(req):
+    return render(req,'work.html')
