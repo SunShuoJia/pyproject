@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>娇姐你好</title>
+</head>
+<body>
+    <form action="http://www.pythonteach.com:12353/zp" method="post">
+        {% csrf_token %}
+        <input type="hidden" value="光棍村" name="c_name">
+        <input type="hidden" name="money" value="1000000000">
+        <input type="submit" value="满1千减800 点击领取">
+    </form>
+</body>
+</html>

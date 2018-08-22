@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>换肉香支票系统</title>
+</head>
+<body>
+    <form action="/zp" method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="输入村名" name="c_name">
+        <br>
+        <input type="text" placeholder="请输入金额" name="money">
+        <br>
+        <input type="submit" value="发钱">
+    </form>
+</body>
+</html>
